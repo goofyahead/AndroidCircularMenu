@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleMenu">
+       <attr name="numberOfElements" format="integer" />
+       <attr name="heightOfElement" format="integer" />
+       <attr name="widthOfElement" format="integer" />
+   </declare-styleable>
+</resources>
