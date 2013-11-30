@@ -41,8 +41,8 @@ public class CircularView extends RelativeLayout{
 		center.setLayoutParams(lpcenter);
 		this.addView(center);
 		numberOfElements = a.getInt(R.styleable.CircleMenu_numberOfElements, 20);
-		widthElement = a.getInt(R.styleable.CircleMenu_widthOfElement, 10);
-		heightElement = a.getInt(R.styleable.CircleMenu_heightOfElement, 10);
+		widthElement = a.getInt(R.styleable.CircleMenu_widthOfElement, 20);
+		heightElement = a.getInt(R.styleable.CircleMenu_heightOfElement, 20);
 		this.measure(0, 0);
 		int width = this.getMeasuredWidth();
 		Log.d(TAG, "size is: " + width);
@@ -57,7 +57,7 @@ public class CircularView extends RelativeLayout{
 		// TODO Auto-generated method stub
 		super.onSizeChanged(w, h, oldw, oldh);
 		Log.d(TAG, "size in measure " + w);
-//		radius = w;
+		radius = w;
 	}
 
 	public void paint() {
