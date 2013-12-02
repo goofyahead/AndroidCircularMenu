@@ -1,8 +1,6 @@
 package es.madgeeklabs.circularview;
 
 import java.util.HashMap;
-import java.util.LinkedList;
-
 import es.madgeeklabs.circularview.R;
 
 import es.madgeeklabs.circularview.views.CircularView;
@@ -15,7 +13,6 @@ import android.view.Menu;
 public class MainActivity extends Activity {
 	
 	private CircularView view;
-	private static int RED_STATUS = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,24 +20,18 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		view = (CircularView) findViewById(R.id.circularView1);
 		
-		LinkedList<Integer> elements = new LinkedList<Integer>();
-		elements.add(0);
-		elements.add(1);
-		elements.add(1);
-		elements.add(0);
-		elements.add(0);
-		elements.add(1);
-		elements.add(1);
-		elements.add(1);
-		elements.add(1);
-		view.setElements(elements);
+		view.setAnimation(CircularView.EXPAND);
+		view.setSizeOfElements(30, 30);
+		
+		int [] elementos = {0,1,1,0,0,0,0,1,0,0,0,0,0,1,0,1,1,1,0,1,0,1,1,1};
+		view.setElements(elementos);
 		
 		HashMap<Integer, Drawable> drawables = new HashMap<Integer, Drawable>();
 		drawables.put(0, getResources().getDrawable(R.drawable.red_circle));
 		drawables.put(1, getResources().getDrawable(R.drawable.green_circle));
 		view.setResources(drawables);
 		
-		view.paint();
+//		view.paint();
 	}
 
 	@Override

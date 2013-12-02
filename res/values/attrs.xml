@@ -4,5 +4,6 @@
        <attr name="numberOfElements" format="integer" />
        <attr name="heightOfElement" format="integer" />
        <attr name="widthOfElement" format="integer" />
+       <attr name="radius" format="integer" />
    </declare-styleable>
 </resources>
